@@ -9,6 +9,9 @@
   },
   "author": "",
   "license": "ISC",
+  "engines":{
+    "node":"12.18.3"
+  },
   "dependencies": {
     "bluebird": "^3.7.2",
     "body-parser": "^1.19.0",

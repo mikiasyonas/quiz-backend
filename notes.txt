@@ -1,0 +1,53 @@
+The system is a cyber security awareness for employee where they will enter and try to solve
+questions(puzzle) this questions are made up of email templates , then they should either answer with yes its phishing
+or no its not phishing
+
+So employee from time to time will take these quizzes and try to guess phishing emails from non phishing emails
+also quizzes can be made up of text questions with multiple choices
+
+Also the system will include a library of material ( videos and posters images )
+
+Collections required:
+
+Questions
+as Email template json ( from, to ,date, attachments array json ( attachment name, type image), body as html. with correct answer as (phishing boolean:true | false)
+text with answers as multiple choices (random number of choices ) & correct choice number
+
+Other collections:
+
+employees: ( name , department , extension)
+Quizzes:quiz name, description,questions ID array, Status as boolean ( active or not)
+Answers or attempts : employeeID, QuestionID, QuizID,Date, Answer
+Users: employee or admin
+Videos: video title, video, publish date
+posters poster title, image, publish date
+
+Admin can see
+-answers attempts, results and dashboard
+-Questions list
+-Questions list with attempts fail rate, pass rate
+-Quiz list and the total number of questions
+-users list and the total number of employee
+-Total active quizzes & active quizzes
+-user with success rate and failure rate based on all attempts on all quizzes
+-users number with success rate and failure rate for each quiz
+-Percentage of correct attempts and failed attempts of all quizzes
+-Total number of Posters & videos
+-Employee list & total number of employee
+-Assign Questions to a quiz (one assignment or multiple)
+-History of employeeID who open posterID or videoID
+-CRUD for (Questions, Quizzes,Users,Videos ,Posters)
+
+Employee can see active quizzes. and scores for each quiz
+-Can start the quiz and make answers attempts
+-Solve questions -> attempts ( employeeID, QuizID, questionID, answer, Date)
+-Can see his score for every quiz
+
+
+
+When a user submits an answer, {quizId: }
+{answer}
+
+- Check if answer is correct/wrong
+- Save data to quiz Result like quizId, [questionId: id, answer: correct/wrong]
+  employeeId, 

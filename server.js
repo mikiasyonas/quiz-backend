@@ -26,6 +26,9 @@ const app = express();
 app.use(methodOverride("_method"));
 // Route files
 
+// Enable CORS
+app.use(cors());
+
 // Swagger
 const swaggerOptions = {
   swaggerDefinition: {
@@ -98,8 +101,6 @@ app.use(limiter);
 // Prevent http param pollution
 app.use(hpp());
 
-// Enable CORS
-app.use(cors());
 
 // Set static folder
 app.use(express.static(path.join(__dirname, "public")));
